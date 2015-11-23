@@ -1,0 +1,22 @@
+<div class="col-md-12 col-sm-10" style="border:1px solid #647dff;;padding-bottom: 10px;">
+
+    <div class="col-md-12 col-sm-12" style="padding: 0px;">
+
+          <span class="col-md-12 col-sm-12 center-block" ng-repeat="mytweet in mytweets" style="margin-left:0px;color:#000000;padding:10px;margin-top:10px;background-color:#f8f8f8;box-shadow: 2px 2px 0px 0px gray;border-top:15px solid #23527c;;">
+
+              <span class="col-md-8 col-sm-8"> &nbsp;
+
+           <p style="color:#2b84ff">#Tweeted..&nbsp; on&nbsp;{{mytweet.timestamp| date:'yyyy-MM-dd HH:mm:ss Z'}}</p>
+        <hr/>
+          <p  ng-bind-html="mytweet.tweet">
+              {{mytweet.tweet}}
+          </p>
+        </span>
+
+          </span>
+
+    </div>
+
+
+</div>
+</div>

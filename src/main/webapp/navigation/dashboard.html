@@ -1,0 +1,116 @@
+<div class="dashboard container-fluid" style="margin-top:2%;padding: 30px;" ng-controller="dashboardController">
+<div class="row">
+        <div class="col-md-3 col-sm-12" >
+        <div class="userdetails" style=" background-color:rgba(255,255,255,0.8);padding: 10px;">
+
+           <div class="profile">
+               <h4 >Welcome&nbsp;{{name}}
+               </h4>
+          <div class="center-block col-md-12 col-sm-12 col-xs-12" style="padding-top: 10px;padding-left:0px;padding-bottom: 10px;">
+           <div class="col-md-12 col-sm-12 col-xs-12" style="margin:0px; padding:0px;">
+               <span class="col-md-5 col-sm-5 col-xs-5" style="padding:0px;"><img src="../images/profilepic/{{imga}}"  class="img-responsive"  alt="Profile Picture"></span>
+               <span class="col-md-7 col-sm-7 col-xs-7" id="count">Followers&nbsp;<span class="badge">{{followin-1}}</span><br>Follows&nbsp;<span class="badge"> {{follower-1}}</span></span>
+           </div>
+
+          </div>
+               <br/>
+               <br/>
+               <div class="center-block usersection" style="margin-top: 30px;">
+                   <a href="" class="glyphicon glyphicon-home"  ng-click="include('feeds.html');">Home</a><br>
+                  <a href="" class=" glyphicon glyphicon-user" ng-click="include('profile.html');">Profile</a>
+                   <br>
+                   <a href="" class="glyphicon glyphicon-pencil" ng-click="include('mytweets.html');">MyTweets</a>
+                   <br/>
+                   <a href="" ></a>
+               </div>
+
+            </div>
+        </div>
+<br><br>
+        </div>
+
+        <div class="col-md-6 col-sm-12"  style="min-height:650px;">
+
+            <div style="background-color:rgba(255,255,255,0.8);padding: 10px; overflow: hidden;">Tweets Goes Here!
+                <br/>
+                <b> Share What's in your mind!</b><br>
+                <div id="emotion-pic" ng-mouseleave="hideEmotion()" class="center-block col-md-pull-2 col-xs-pull-2 col-sm-pull-2" >
+                    <table>
+                        <tr>
+                            <td><img src="../images/emotions/smiley-cool.gif" ng-click="addEmotion('smiley-cool.gif')"></td>
+                            <td><img src="../images/emotions/smiley-cry.gif" ng-click="addEmotion('smiley-cry.gif')"></td>
+                            <td><img src="../images/emotions/smiley-embarassed.gif" ng-click="addEmotion('smiley-embarassed.gif')" ></td>
+                            <td><img src="../images/emotions/smiley-foot-in-mouth.gif" ng-click="addEmotion('smiley-foot-in-mouth.gif')"> </td>
+                            <td><img src="../images/emotions/smiley-wink.gif" ng-click="addEmotion('smiley-wink.gif')"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="../images/emotions/smiley-frown.gif" ng-click="addEmotion('smiley-frown.gif')"></td>
+                            <td><img src="../images/emotions/smiley-innocent.gif" ng-click="addEmotion('smiley-innocent.gif')"></td>
+                            <td><img src="../images/emotions/smiley-kiss.gif" ng-click="addEmotion('smiley-kiss.gif')"></td>
+                            <td><img src="../images/emotions/smiley-laughing.gif" ng-click="addEmotion('smiley-laughing.gif')"></td>
+                            <td><img src="../images/emotions/smiley-undecided.gif" ng-click="addEmotion('smiley-undecided.gif')"></td>
+                        </tr>
+                        <tr>
+                            <td><img src="../images/emotions/smiley-money-mouth.gif" ng-click="addEmotion('smiley-money-mouth.gif')"></td>
+                            <td><img src="../images/emotions/smiley-sealed.gif" ng-click="addEmotion('smiley-sealed.gif')"></td>
+                            <td><img src="../images/emotions/smiley-smile.gif" ng-click="addEmotion('smiley-smile.gif')"></td>
+                            <td><img src="../images/emotions/smiley-surprised.gif" ng-click="addEmotion('smiley-surprised.gif')"></td>
+                            <td><img src="../images/emotions/smiley-frown.gif" ng-click="addEmotion('smiley-frown.gif')"></td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class=" col-md-12 center-block" id="tweetcontent"  contenteditable="true" style="border:1px solid black;max-height:100px;height: 50px;background: #f5f5f5; ;"></div>
+                <div class="col-md-4 pull-right" style="margin-top:5px;">
+
+
+                  <a href="" class="emotion" ng-click="showEmotion()"> <span><img src="../images/emotions/sm.gif"></span></a>&nbsp;
+                    <input type="button" class="btn btn-success col-md-8 pull-right" Value="Post" ng-click="tweet()">
+                </div>
+            </div>
+            <br>
+
+
+          <div class="tweets-section" style="margin-bottom:10px;min-height:400px;background-color:rgba(255,255,255,0.8);overflow: hidden;" ng-include="page"></div>
+         </div>
+         <div class="col-md-3 col-sm-12" >
+             <div style="padding: 10px; background-color:rgba(255,255,255,0.8);">
+              <div class="follow">
+
+                <h4>Who to follow?.</h4>
+
+                  <div ng-repeat="users in alluser">
+                    <div class="center-block col-md-12 col-sm-6" id="usertofollow"><a href="">
+                        <img src="../images/profilepic/{{users.image}}" class="img-responsive col-md-3 col-sm-3" width="100px" height="100px" style="margin-top:5px;"> {{users.name}}</a>
+                     <span class="col-md-1 col-sm-1 col-xs-1 pull-right">
+                         <a href=""  class="pull-right" ng-click="follow(users.email)">
+                             <span class="input-group-addon" style="padding:0px;">
+                             <span class="glyphicon glyphicon-plus btn btn-success" style="margin:0px;"about="Follow"></span></span> </a>
+                      </span></div>
+                  </div>
+
+               </div>
+                 <br>
+
+             &nbsp;
+             </div>
+             <br>
+             <div class="follow col-md-12 col-sm-12" style="padding: 10px; background-color:rgba(255,255,255,0.8);">
+
+                 <h4>Following</h4>
+
+                 <div ng-repeat="users in following">
+                     <div class="center-block col-md-12 col-sm-6" id="usertofollow"><a href="">
+                         {{users.follow}}</a>
+                     <span class="col-md-1 col-sm-1 col-xs-1 pull-right">
+                         <a href=""  class="pull-right" ng-click="unfollow(users.follow)">
+                             <span class="input-group-addon" style="padding:0px;">
+                             <span class="glyphicon glyphicon-minus btn btn-success" style="margin:0px;"about="unFollow"></span></span> </a>
+                      </span></div>
+                 </div>
+
+             </div>
+
+      </div>
+</div>
+    </div>

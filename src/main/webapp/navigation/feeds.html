@@ -1,0 +1,27 @@
+ <div class="col-md-12 col-sm-12 col-xs-12" style="padding-bottom: 10px;">
+               Public Tweets Goes Herer////
+
+      <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0px;">
+
+          <div class="col-md-12 col-sm-12 col-xs-12" ng-repeat="usertweet in usertweets" style="margin-left:0px;color:#000000;padding:10px;margin-top:10px;background-color:#f8f8f8;box-shadow: 2px 2px 0px 0px gray;border-top:15px solid #23527c;;">
+
+
+          <span class="col-md-3 col-sm-3 col-xs-3" style="padding-right:0px" >
+              <img  src="../images/profilepic/{{usertweet[4]}}" style="padding-right:0px" class="img-responsive col-md-12 col-sm-12 col-xs-12"  alt="user image">
+          </span>
+        <span class="col-md-9 col-sm-9 col-xs-9">  {{usertweet[1]}}&nbsp;
+
+           <p style="color:#2b84ff">#Tweeted..&nbsp; on&nbsp;{{usertweet[2]| date:'yyyy-MM-dd HH:mm:ss Z'}}</p>
+        <hr/>
+          <p  ng-bind-html="usertweet[3]">
+              {{usertweet[3]}}
+          </p>
+        </span>
+
+          </span>
+
+      </div>
+
+
+         </div>
+</div>

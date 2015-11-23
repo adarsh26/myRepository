@@ -1,0 +1,51 @@
+<div class="login col-md-4 col-sm-4 col-xs-10 pull-right" ng-controller="signupController">
+    <form ng-submit="Register(register);" id="signup">
+        <div class="row">
+            <div class="col-sm-10">
+
+                <label for="name" class="chart-pie-label-line white">Full Name:</label><br/>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" ng-model="register.name" placeholder="Full Name"  required>
+                </div>
+                <br/>
+                <label for="email" class="chart-pie-label-line white">Email:</label><br/>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="email" class="form-control" ng-model="register.email" ng-blur="checkusername(register.email);" placeholder="This Will Be Your Username" required>
+                </div>
+                <br/>
+                <label for="password" class="chart-pie-label-line white">Password:</label><br/>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <span class="input-group list-inline">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" class="form-control" ng-model="register.password" placeholder="Password" required>
+                        </span>
+                    </div>
+                    <div class="col-xs-6">
+                         <span class="input-group list-inline">
+                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                            <input type="password" class="form-control" ng-model="register.confirmpassword" placeholder="Re-Password" ng-blur="matchPassword()" required>
+                        </span>
+                    </div>
+                </div>
+              <br/>
+                <label for="Mobile Number" class="chart-pie-label-line white">Contact No:</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    <input type="tel" class="form-control" ng-model="register.number" placeholder="Contact No." required>
+                </div><br/>
+                <label for="Gender" class="chart-pie-label-line white">Gender:</label>
+                <div class="input-group">
+                    <input type="radio" name="sex" value="male" ng-model="register.gender" required><b>Male</b>
+                   &nbsp;&nbsp;&nbsp; <input type="radio" name="sex" ng-model="register.gender" value="female" required><b>Female</b>
+                </div><br/>
+                <div class="input-group">
+                    <input type="submit" class="btn btn-primary" value="Register" required>&nbsp;&nbsp;<b>Else</b>&nbsp;&nbsp;
+                    <a href="/#/" class="btn btn-success">Login</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

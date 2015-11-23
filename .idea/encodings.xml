@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/sm.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-cool.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-cry.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-embarassed.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-foot-in-mouth.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-frown.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-innocent.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-kiss.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-laughing.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-money-mouth.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-sealed.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-smile.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-surprised.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-tongue-out.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-undecided.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-wink.gif" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp/images/emotions/smiley-yell.gif" charset="windows-1252" />
+  </component>
+</project>
+

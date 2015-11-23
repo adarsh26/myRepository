@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" intial-scale="1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/loginController.js"></script>
+    <script src="js/signupController.js"></script>
+    <script src="js/dashboardController.js"></script>
+    <script src="js/angularhtml.js"></script>
+
+    <title>My Twitter</title>
+</head>
+<body ng-app="myApp">
+<div class="container-fluid">
+          <div class="row fixed-header" ng-controller="mainController">
+             <div class="col-sm-12" id="head">
+                 <div class="col-sm-4 col-md-4" id="logo"><a href="">@myTwitter</a></div>
+                 <div class="col-sm-1 col-md-1 pull-right" ng-if="session!='false'"><span><a href="" ng-click="logout();" style="font-size:16px;color:white">Logout</a></span> </div>
+             <div class="col-sm-7 col-md-7" style="padding-right: 0px;">
+                 <div class="col-sm-4 col-md-4" id="dash" ng-if="session!='false'"><span class="glyphicon glyphicon-home"></span><a href="" ng-click="dashboard()">Dashboard</a></div>
+
+                 <div id="search_user"  class="input-group col-sm-5 col-md-5 pull-right" style="margin-right:0px;">
+                    <input type="search" class="search_user" ng-model="searchuser"  ng-keyup="search(searchuser)"  placeholder="Seach Anyone Here" maxlength="25" required>
+              <div class="resultsearch" ng-if="clients!='null'">
+                  <ul class="list-user col-md-12" ng-repeat="client in clients">
+                      <li><a href="" ng-click="userprofile(client)"><img src="images/profilepic/{{client.image}}"  alt="user image" class="img-responsive col-md-3"><span class="col-md-8">{{client.name}}</span></a></li>
+                  </ul>
+                </div>
+
+                </div>
+             </div>
+              </div>
+          </div>
+
+          <div class="row wrapper">
+              <div class="col-sm-12" id="bootfix">
+                   <div class="main" ng-view>
+
+                   </div>
+                  <div id="foot">
+                      <a href="">Footer Content Goes Here!</a>
+                  </div>
+               </div>
+          </div>
+
+
+   </div>
+</body>
+</html>

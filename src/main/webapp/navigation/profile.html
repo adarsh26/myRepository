@@ -1,0 +1,31 @@
+<div class="col-sm-12 col-md-12 col-xs-12">
+    <br><br>
+   <span>
+   <img src="../images/profilepic/{{imga}}" class="img-responsive col-md-5 col-sm-5 col-xs-5" alt="user image">
+   <span class="col-md-7 col-sm-7 col-xs-7"><h3>{{name}}</h3><h4 input-group-addon>{{email}}<span class="glyphicon glyphicon-envelope"></span></h4><h5>{{mobile}}<span class="glyphicon glyphicon-phone"></span></h5>
+       <h5>{{gen}}<span class="glyphicon glyphicon-user"></span></h5></span>
+
+   </span>
+    &nbsp;
+    <div>
+        Change Profile Picture
+    <form method="POST" enctype="multipart/form-data"  action="/upload">
+        <input type="file" name="file"><br /> <input type="submit" value="Upload">
+    </form>
+    </div>
+    <div class="col-md-12 col-sm-12">
+        <h4>Change Password!</h4>
+        <form>
+            <table border="0" class="table-responsive col-md-12 col-sm-12 passwordtabl" >
+                <tr><td><input type="password" placeholder="Current Password" ng-model="change.pass"  required></td></tr>
+                <tr><td><input type="password" placeholder="New Passwword"   ng-model="change.newpass" required></td></tr>
+                <tr><td><input type="password" placeholder="Repeat Password"  ng-model="change.repass"  required></td></tr>
+                <tr><td><input type="button" class="btn btn-success" ng-click="changePassword(change)" value="change Password"></td></tr>
+            </table>
+        </form>
+
+
+    </div>
+
+<hr/>
+</div>
