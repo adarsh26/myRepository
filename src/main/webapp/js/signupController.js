@@ -43,7 +43,7 @@ app.controller('signupController',function($scope,$http,$rootScope,$location){
                       if(response.data == "ACCEPTED")
                       {
                           alert("Successfully Registered!");
-                          $location.path("/login");
+                          $location.path("/");
                           $scope.user={};
                       }
 
