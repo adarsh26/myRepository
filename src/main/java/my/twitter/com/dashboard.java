@@ -96,7 +96,7 @@ public class dashboard {
     @RequestMapping(value = "/gettweet" , method = RequestMethod.POST)
     public ResponseEntity returnTweets()
     {
-       List<GetTweet> list=tweetsRepository.getTweets(session.getEmail());
+       List list=tweetsRepository.getTweets(session.getEmail());
         System.out.println("tweet returning:"+list);
         return new ResponseEntity(list,HttpStatus.ACCEPTED);
     }
